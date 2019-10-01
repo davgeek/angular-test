@@ -1,0 +1,16 @@
+<div>
+<p>componente1 works!</p>
+<input type="text" name="texto" [(ngModel)]="texto" id="">
+<br>
+<button (click)="enviar()">Agregar</button>
+</div>
+
+<form [formGroup]="campos" (ngSubmit)="enviar()" >
+  <input formControlName="texto" type="text" name="texto">
+  <input type="text" formControlName="texto2" name="texto2">
+  <input type="submit" value="Enviar">
+</form>
+
+<p>{{errores}}</p>
+
+<router-outlet></router-outlet>

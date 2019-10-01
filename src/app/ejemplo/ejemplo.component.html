@@ -1,0 +1,20 @@
+<h1>Componente de Ejemplo</h1>
+<p>{{variable}}</p>
+<br>
+<input [(ngModel)]="variable">
+<button (click)="agregar()" >Agergar</button>
+<br>
+<p *ngIf="variable == 'hola'">Hola mundo</p>
+
+<br>
+<input type="text"  [(ngModel)]="nombre">
+<p>{{nombre}}</p>
+<ul>
+  <li colorea colorTexto="white" colorBG="pink" *ngFor="let item of arreglo">{{item}}</li>
+</ul>
+
+<p>Entrada: {{entrada}}</p>
+
+<p>{{fecha | date:'yyyy/MM/dd'}}</p>
+<p>{{dinero | currency:'MXN'}}</p>
+<p>{{'ITSON' | itson:'00001'}}</p>
